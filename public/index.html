@@ -3,8 +3,8 @@
 
 <head>
 	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, user-scalable=no">
 	<title>Se7enSky/heroku-template-static</title>
-	<link href="/assets/styles.min.css" rel="stylesheet" type="text/css">
 </head>
 
 <body>
@@ -12,6 +12,18 @@
 	<p>
 		<a title="Se7enSky/heroku-template-static at GitHub" href="https://github.com/Se7enSky/heroku-template-static">Se7enSky/heroku-template-static at GitHub</a>
 	</p>
+
+	<script>
+		var cb = function() {
+			var l = document.createElement('link'); l.rel = 'stylesheet';
+			l.href = '/assets/styles.min.css';
+			var h = document.getElementsByTagName('head')[0]; h.parentNode.insertBefore(l, h);
+		};
+		var raf = requestAnimationFrame || mozRequestAnimationFrame ||
+				webkitRequestAnimationFrame || msRequestAnimationFrame;
+		if (raf) raf(cb);
+		else window.addEventListener('load', cb);
+	</script>
 </body>
 
 </html>
