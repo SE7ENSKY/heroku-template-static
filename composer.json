@@ -1,5 +1,16 @@
 {
-  "require-dev": {
-    "heroku/heroku-buildpack-php": "*"
-  }
+	"name": "Se7enSky/se7ensky-static-template",
+	"authors": [
+		{
+			"name": "SE7ENSKY studio",
+			"email": "info@se7ensky.com"
+		}
+	],
+	"config": { "secure-http": false },
+	"require": {
+		"php": "^7"
+	},
+	"require-dev": {
+		"heroku/heroku-buildpack-php": "*"
+	}
 }
